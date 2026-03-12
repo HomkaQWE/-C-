@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор заказа</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Калькулятор стоимости заказа</h1>
+        
+        <div class="input-group">
+            <label for="product">Выберите товар:</label>
+            <select id="product">
+                <option value="1000">Ноутбук — 1000 руб.</option>
+                <option value="500">Смартфон — 500 руб.</option>
+                <option value="300">Планшет — 300 руб.</option>
+                <option value="50">Чехол — 50 руб.</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="quantity">Количество:</label>
+            <input type="number" id="quantity" min="1" value="1">
+        </div>
+
+        <div class="input-group">
+            <label>Дополнительные услуги:</label>
+            <label><input type="checkbox" id="warranty" value="200"> Гарантия (+200 руб.)</label><br>
+            <label><input type="checkbox" id="delivery" value="150"> Доставка (+150 руб.)</label><br>
+            <label><input type="checkbox" id="gift" value="50"> Подарочная упаковка (+50 руб.)</label>
+        </div>
+
+        <div class="input-group">
+            <label for="promo">Промокод:</label>
+            <input type="text" id="promo" placeholder="Введите код">
+            <small style="display: block; margin-top: 5px;">Доступные коды: SKIDKA10 (скидка 10%)</small>
+        </div>
+
+        <button id="calcOrderBtn" class="btn">Рассчитать</button>
+
+        <div class="result" id="orderResult"></div>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>
